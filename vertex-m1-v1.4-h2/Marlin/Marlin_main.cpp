@@ -2711,13 +2711,25 @@ void process_commands()
   case 420: //M420 - Rxxx Exxx Bxxx 		
   
     if (code_seen('R'))
-      digitalWrite(REDPIN, code_value() != 0 ? 1 : 0);
-      
+      if (code_value() > 255) 
+        digitalWrite(REDPIN, 1);
+      else if (code_value() <= 0)
+        digitalWrite(REDPIN,0);
+      else analogWrite(REDPIN, (int)round(code_value()));
+            
     if (code_seen('E'))
-      digitalWrite(GREENPIN, code_value() != 0 ? 1 : 0);
+      if (code_value() > 255) 
+        digitalWrite(GREENPIN, 1);
+      else if (code_value() <= 0)
+        digitalWrite(GREENPIN,0);
+      else analogWrite(GREENPIN, (int)round(code_value()));
       
     if (code_seen('B'))
-      digitalWrite(BLUEPIN, code_value() != 0 ? 1 : 0);
+      if (code_value() > 255) 
+        digitalWrite(BLUEPIN, 1);
+      else if (code_value() <= 0)
+        digitalWrite(BLUEPIN,0);
+      else analogWrite(BLUEPIN, (int)round(code_value()));
 
     break;
 #endif
