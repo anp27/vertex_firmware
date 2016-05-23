@@ -440,7 +440,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {134.74,134.74,4266.66,200}  //
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {134.74,134.74,4266.66,148}  //
 #define DEFAULT_MAX_FEEDRATE          {160, 160, 10, 10000}    // (mm/sec)800
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.8000
 
@@ -483,7 +483,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define EEPROM_CHITCHAT
 
 // Preheat Constants
-#define PLA_PREHEAT_HOTEND_TEMP 210 
+#define PLA_PREHEAT_HOTEND_TEMP 190 
 #define PLA_PREHEAT_HPB_TEMP 0
 #define PLA_PREHEAT_FAN_SPEED 165   // Insert Value between 0 and 255
 
